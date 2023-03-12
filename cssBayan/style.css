@@ -27,12 +27,13 @@ aside {
 html,
 body {
   height: 100%;
-  width: 100%;
+  width: 100vw;
   font-size: 100%;
   line-height: 1;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 input,
 button,
@@ -84,11 +85,11 @@ h6 {
 .header-heading {
   font-size: 2em;
   font-weight: 700;
-  padding: 0.5rem 0;
+  padding: 0.5rem 2rem;
 }
 
-.bayan-container {
-  cursor: pointer;
+.bayan-items {
+  position: relative;
 }
 
 .bayan-item {
@@ -98,6 +99,7 @@ h6 {
   display: flex;
   justify-content: space-between;
   cursor: pointer;
+  color: blue;
 }
 
 .bayan-icon {
@@ -105,8 +107,63 @@ h6 {
   height: 20px;
   background: url(assets/plus.png) center no-repeat;
   background-size: 15px 15px;
+  display: none;
 }
 
 .bayan-img {
-  display: none;
+  display: block;
+  width: 0%;
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+
+.bayan-container {
+  padding: 2rem;
+}
+
+.bayan-input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: transparent;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.bayan-container:hover .bayan-icon {
+  display: block;
+}
+
+.bayan-container:hover .bayan-item {
+  color: #000;
+}
+
+.bayan-input:checked~.bayan-img {
+  width: 50%;
+}
+
+.bayan-input:checked~.bayan-item>.bayan-icon {
+  background: url(assets/cancel.png) center no-repeat;
+  background-size: 15px 15px;
+}
+.bayan-input:checked~.bayan-item {
+  color: #000;
+}
+.bayan-input:active~.bayan-item {
+  color: blue;
+}
+.bayan-input:active~.bayan-img {
+  opacity: 0.5;
+}
+
+.bayan-items:hover .bayan-img {
+  width: 50%;
+}
+
+.bayan-items:hover .bayan-icon {
+  background: url(assets/cancel.png) center no-repeat;
+  background-size: 15px 15px;
 }
