@@ -149,12 +149,15 @@ h6 {
   background: url(assets/cancel.png) center no-repeat;
   background-size: 15px 15px;
 }
+
 .bayan-input:checked~.bayan-item {
   color: #000;
 }
+
 .bayan-input:active~.bayan-item {
   color: blue;
 }
+
 .bayan-input:active~.bayan-img {
   opacity: 0.5;
 }
