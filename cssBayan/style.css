@@ -75,3 +75,38 @@ h6 {
   font-size: inherit;
   font-weight: 400;
 }
+
+.content-container {
+  margin: 0 auto;
+  max-width: 51.25rem;
+}
+
+.header-heading {
+  font-size: 2em;
+  font-weight: 700;
+  padding: 0.5rem 0;
+}
+
+.bayan-container {
+  cursor: pointer;
+}
+
+.bayan-item {
+  font-size: 1.5em;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.bayan-icon {
+  width: 20px;
+  height: 20px;
+  background: url(assets/plus.png) center no-repeat;
+  background-size: 15px 15px;
+}
+
+.bayan-img {
+  display: none;
+}
